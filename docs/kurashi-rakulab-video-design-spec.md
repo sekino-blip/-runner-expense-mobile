@@ -261,6 +261,7 @@ CTA: (1行)
 |---|---|
 | **決め台詞の固定** | 見出しは **`ここ、` / `NGが3つあります`** で全シーン固定。**1文字も変えない。**「この部屋」「この玄関」等に置き換えない(14本中大半が「部屋」ではないため)。場所はトピックバッジで示す |
 | 断定の禁止 | 「〇〇はNG」と書かない。「〇〇だと、こうなりやすい」 |
+| **解答テロップの許容形式**(**確定**。#1玄関で実運用検証済み) | 出典が必要な主張は禁止。以下のいずれかのみ使用可。<br>**形式A(観察の言い換え)**: 一枚絵に描かれた状態をそのまま言葉にしたもの。例:「たたきの靴、散らばっていませんか」<br>**形式B(自明な帰結)**: 外部データを介さず、絵の状態から直接論理的に導ける帰結のみ<br>**禁止**: 具体的な数値基準(「1人1足」等)、「〜という調査」「〜と言われている」等の外部権威への言及、統計的傾向の断定 |
 | 1テロップ | 最大2行 / 1行あたり全角16文字以内 |
 | 敬体 | 既存投稿と同じ、静かで丁寧なトーン。煽り表現・強い断定を使わない |
 | 数字 | 具体的な金額・時間・削減率を書かない(一次情報が必要になるため) |
@@ -344,16 +345,127 @@ CTA: (1行)
 | 姿見 | 左中央 | ダミー(正常) |
 | ドア | 中央奥 | ダミー(正常) |
 
-**解答テロップ(C4)**
+**解答テロップ(C4)** ← **確定(チャッピー納品版。形式Aのみで構成、出典不要)**
 
 | # | 時間 | テロップ |
 |---|---|---|
-| ① | 10.00-11.33 | `靴が出しっぱなし` / `1人1足までが目安` |
-| ② | 11.33-12.67 | `壊れた傘、` / `そのままになっていませんか` |
-| ③ | 12.67-14.00 | `靴箱の上の郵便物。` / `“一時置き”が定位置になりがち` |
+| ① | 10.00-11.33 | `たたきの靴、` / `散らばっていませんか` |
+| ② | 11.33-12.67 | `傘立てに、壊れた傘が` / `混ざっていませんか` |
+| ③ | 12.67-14.00 | `靴箱の上、郵便物やチラシが` / `積み重なっていませんか` |
 
-**③が「難」である理由**: 見えてはいるが、**多くの人がNGだと認識していない**タイプ(4章の定義b)。
-加えて上部に小さく配置することで、視線が届きにくくしている。
+**③が「難」である理由**: 設計上、上部やや右に小さく配置するため。見つけにくくなるという**推測**であり、
+実際の難易度(視聴者による検証)は未実施 `【推測】`。
+
+**CTA(確定)**: `いくつ分かった? コメントで`
+
+**キャプション(確定)**
+
+```
+ここ、NGが3つあります👀
+
+今回のテーマは「玄関」。
+片付けの視点で探す、暮らしの間違い探しです。
+
+① たたきに散らばった靴
+② 傘立てに混ざった壊れた傘
+③ 靴箱の上に積み重なった郵便物・チラシ
+
+まずは玄関の靴を、置き場所に戻すところから。
+
+いくつ分かった?コメントで
+
+暮らしラク研究所｜@kurashi_rakulab
+毎日の「ちょっと面倒」を、少しラクに。
+
+※イラストは収納のイメージ図です。
+
+#間違い探し #収納アイデア #片付け #暮らしの工夫 #暮らしラク研究所
+```
+
+**事実主張**: 無(形式Aのみ。外部の裏付けが必要な主張は含まれない)
+
+---
+
+### #1 玄関 確定版プロンプト(コーデックスにそのまま渡す)
+
+10章の雛形に、上記の確定内容を差し込み済みのものを以下に示す。**このままコピーしてコーデックスに渡せる。**
+
+```
+Create a vertical 9:16 video, exactly 15.0 seconds, 1080x1920, 30fps.
+
+VISUAL STYLE — match the brand's existing videos exactly. Use the `claude`
+built-in style for consistency.
+- Warm cream background (#F0E9DC)
+- Deep forest green headline text (pick the exact green from the brand's
+  existing videos; do not invent a new green)
+- Terracotta orange rounded topic badge (same — pick from existing videos)
+- Subtle scattered paper-square background texture
+- Calm flat line-art illustration, drawn with deep green strokes only,
+  minimal fill
+- Quiet editorial tone. NO spoken narration, NO voice synthesis.
+  On-screen text + sound effects only.
+
+SAFE AREAS — keep all text within y=300..1450 and x=80..900.
+
+SCENE ILLUSTRATION (one single static drawing, used across the whole video):
+Setting: a genkan (Japanese entryway), viewed from a front / slightly angled view.
+- NG1 (easy): 6 pairs of shoes scattered on the concrete floor (たたき),
+  positioned bottom-center.
+- NG2 (easy): an umbrella stand at bottom-left, mixing normal umbrellas with
+  one visibly broken umbrella (bent rib).
+- NG3 (hard): a stack of mail and flyers piled on top of the shoe cabinet,
+  positioned upper-right, drawn small.
+- Dummy items, all drawn in a NORMAL tidy state (do not make them ambiguous):
+  shoe cabinet body (upper-center), a key hook with keys hanging (upper-right),
+  a potted plant (bottom-right), 2 pairs of slippers neatly aligned
+  (center-right), a standing mirror (center-left), a door (center-back).
+Keep NG1/NG2/NG3 spaced apart from each other and from dummy items so their
+160px-diameter answer circles won't overlap anything else.
+
+TIMELINE:
+[0.00-2.00] Series label "暮らしの間違い探し / 01" small at top.
+  Terracotta badge "玄関". Bold deep-green headline
+  "ここ、" / "NGが3つあります".
+  The illustration fades in from opacity 0.25 at 0.30s to 1.0 at 2.00s —
+  it MUST be clearly visible by 1.0s.
+  SFX: one soft pop at 0.00.
+
+[2.00-9.00] SEARCH TIME. Show the illustration full, COMPLETELY STATIC.
+  No zoom, no pan, no parallax, no element animation whatsoever.
+  Small label "NGは3つ" at y=330.
+  A thin terracotta progress bar at y=1450 depletes right-to-left over 7.0s.
+  Do NOT show numbers counting down. Do NOT show any hint or marker.
+  SFX: silence.
+
+[9.00-10.00] Cream overlay at 0.85 opacity over the illustration.
+  Centered deep-green text "答え合わせ". SFX: one soft chime. Exactly 1.0s.
+
+[10.00-14.00] Remove the overlay. Reveal the three NGs in this exact order,
+  drawing an OUTLINE-ONLY terracotta circle (no fill, ~160px diameter) at
+  each location. Circles ACCUMULATE — do not erase previous ones.
+  Each circle draws in over 0.25s.
+  [10.00-11.33] circle on the scattered shoes (NG1) + caption at y=1400:
+    "たたきの靴、" / "散らばっていませんか"
+  [11.33-12.67] circle on the broken umbrella (NG2) + caption:
+    "傘立てに、壊れた傘が" / "混ざっていませんか"
+  [12.67-14.00] circle on the mail stack (NG3) + caption:
+    "靴箱の上、郵便物やチラシが" / "積み重なっていませんか"
+  SFX: same pop for the first two; a higher/stronger pop for the third.
+
+[14.00-15.00] Keep the illustration with all three circles.
+  Caption at y=1400: "いくつ分かった? コメントで".
+  From 14.70 to 15.00, cross-fade back into the exact 0.00 frame layout so
+  the video loops seamlessly. Do NOT use a closing end-card (confirmed spec —
+  no bookmark/save card in this series).
+
+HARD CONSTRAINTS:
+- Never mention bacteria, germs, hygiene, disinfection, or food safety.
+- Never state money amounts, electricity costs, or savings percentages.
+- No brand names, product names, logos, or people.
+- Never put the answer inside the question text.
+- Use only the exact caption text given above — do not paraphrase or add
+  reasoning/statistics of your own.
+```
 
 ---
 
@@ -465,6 +577,7 @@ HARD CONSTRAINTS:
 | 日付 | 内容 |
 |---|---|
 | 2026-09-11 | 初版作成(ドラフト)。Codexが動画生成を担当する前提で、カット割り・一枚絵設計・生成プロンプト雛形・納品チェックリストを定義 |
+| 2026-09-11 | **#1玄関 確定**。チャッピー納品の解答テロップ・キャプションを反映(2回の差し戻しを経て形式Aのみで確定)。5章に解答テロップの許容形式ルール(形式A/B)を追加。コーデックスにそのまま渡せる確定版プロンプトを9章に追加 |
 | 2026-09-11 | **A-1承認**。C5の締めカード廃止を確定仕様に変更。代替案(14.0-14.7秒に短縮)を削除 |
 | 2026-09-11 | 決め台詞を「この部屋、NGが3つあります」→**「ここ、NGが3つあります」に変更**し全シーン固定と規定(3章C1 / 5章 / 9章 / 10章プロンプト雛形に反映) |
 | 2026-09-11 | 0章を全面改稿。チャッピー(ChatGPT)とコーデックス(Codex)を分離し、成果物別の担当表・各者の禁止事項・分担根拠・HANDOFFフォーマットを追加 |
