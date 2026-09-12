@@ -309,6 +309,18 @@ HEX値をピクセルサンプリングして報告する。
 3. NG①②(易)は中央〜下部の視認しやすい位置に置く
 4. 3箇所とも、円マーカー(直径約160px)を重ねても他のNGと重ならない間隔を空ける
 
+**標準解釈(2026-09-12確定、#8・#9を機に明文化)**: 上記2・3は厳密な座標ルールではなく、
+**「易/難の本質は目立ちやすさであり、画面上の位置は目立ちやすさを実現する典型的な手段の1つに過ぎない」**
+という原則の具体例である。実物の配置上、NG②(易)が構造的に上段・高い場所にならざるを得ない場合
+(#8押し入れ「上段の荷物」、#9子どものおもちゃ「高い場所の収納」等)は、**その要素を大きく・
+はっきりと描くことで視認しやすさ(易)を担保してよい。** 逆にNG③(難)は、位置に関わらず
+小さく・目立たない描写を優先する。位置ルールと目立ちやすさが両立しない場合は、後者を優先する。
+
+**例外: 1つのNGが複数箇所にまたがる場合の解答表示**
+- NG②等、近接する2箇所にまたがる概念は、**縦長楕円1つ**で両方を囲んでよい(#10食品ストックで確立)
+- NG③等、離れた3箇所にまたがる概念(#6リビングのリモコン分散等)は、**標準の160px円を該当箇所の数だけ同時に表示**してよい(#6で確立)。ただし増やせるのはこの用途のみで、通常のNGは引き続き1箇所1円が原則
+- どちらの例外を使うかは**Claudeが個別に判断・承認する**。コーデックスが独断で形状・数を変更しない
+
 ### ダミー要素
 - NG以外の小物を **5〜8個** 配置する(観葉植物、鍵フック、カレンダー、スリッパ等)
 - **ダミーはすべて「正常な状態」で描く。**紛らわしくするために半端に乱さない
@@ -1397,6 +1409,364 @@ HARD CONSTRAINTS: same as #1(6章参照)。特に:
 
 ---
 
+### 9-6. #6 リビング
+
+`【事実】` 2026-09-12、コーデックス経由でチャッピーから納品。企画書8-1章の事前チェック
+(「あとで見る」「毎日発生している」を不採用)を正しく適用。NG③(リモコン3箇所分散)は
+4章の「複数円の例外」を適用し、Claudeが確定。
+
+| 項目 | 内容 |
+|---|---|
+| トピックバッジ | `リビング` |
+| シリーズラベル | `暮らしの間違い探し / 06` |
+| 見出し | `ここ、` / `NGが3つあります`(固定) |
+
+**一枚絵に描くもの**(リビングを正面から見た構図。ソファ・テーブル・テレビ台を配置)
+
+| 要素 | 位置 | 種別 |
+|---|---|---|
+| ソファの上に積まれた洗濯物 | **ソファ・中央** | **NG①(易)** |
+| テーブルの上に置かれた書類 | **テーブル上** | **NG②(易)** |
+| リモコン3個が(a)ソファ座面の隙間(b)テレビ台の上(c)本棚の上、に分散(各々小さめ) | **3箇所・離れた位置** | **NG③(難・複数円例外)** |
+| ソファ本体 | 全体の骨格 | ダミー(正常・空間) |
+| テーブル本体 | 全体の骨格 | ダミー(正常・空間) |
+| テレビ・テレビ台 | 全体の骨格 | ダミー(正常・空間) |
+| クッション、きちんと並んでいる | ソファ上・別位置 | ダミー(正常) |
+| 本棚の一角、本が整然と並ぶ | 端 | ダミー(正常) |
+| ラグ・カーペット | 床全体 | ダミー(正常・空間) |
+
+**解答テロップ(確定)**
+
+| # | 時間 | テロップ |
+|---|---|---|
+| ① | 10.00-11.33 | `ソファの上に、` / `洗濯物が積まれていませんか` |
+| ② | 11.33-12.67 | `テーブルの上に、` / `書類が置かれていませんか` |
+| ③ | 12.67-14.00 | `リモコンの置き場所、` / `ばらばらになっていませんか`(**3箇所同時に円表示**) |
+
+**CTA**: 動画`いくつ分かった? コメントで` / キャプション`いくつ分かった?コメントで`
+
+**キャプション**: 8ブロック確定(テーマ「リビング」、①②③は上表NG名、最初の一歩「まずはソファの洗濯物を、しまうところから。」、ハッシュタグ5個)
+
+**事実主張**: 無(形式Aのみ)
+
+### #6 リビング 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Follow #1's visual style/safe areas/timeline exactly(9-1章参照).
+SCENE: a living room, sofa + coffee table + TV stand, viewed from front.
+- NG1(easy): laundry piled on the sofa, center.
+- NG2(easy): documents placed on the coffee table.
+- NG3(hard, THREE-CIRCLE EXCEPTION per 4章): three small remote controls
+  scattered in three separate spots — (a) tucked in a sofa cushion gap,
+  (b) on the TV stand, (c) on a bookshelf edge. At 12.67s, draw THREE
+  standard 160px circles simultaneously, one per remote, all appearing
+  together as NG3's single reveal moment. Do not merge into one shape.
+- Dummies(normal): sofa body, table body, TV+stand, neatly arranged
+  cushions, a tidy bookshelf corner, a rug.
+Series label "暮らしの間違い探し / 06". Badge "リビング".
+[10.00-11.33] circle NG1 + "ソファの上に、"/"洗濯物が積まれていませんか"
+[11.33-12.67] circle NG2 + "テーブルの上に、"/"書類が置かれていませんか"
+[12.67-14.00] THREE circles NG3 + "リモコンの置き場所、"/"ばらばらになっていませんか"
+HARD CONSTRAINTS same as #1: no future-behavior/frequency claims("あとで見る"
+"毎日" etc省く), no answer-in-question, no brand/logo.
+```
+
+---
+
+### 9-8. #8 押し入れ
+
+`【事実】` 2026-09-12、コーデックス経由でチャッピーから納品。**骨子変更承認**: NG①「中身不明」→
+「内容表示のない段ボール」、NG②「上段に重い物」→「上段に置かれた荷物」(重量断定を削除)、
+NG③「取り出しにくい配置」→「奥の物の前に置かれた別の物」(Claudeの8-1章提案をさらに具体化)。
+NG②の位置(上段)は4章の標準解釈(目立ちやすさ優先)を適用し、大きく描画することで易を担保。
+
+| 項目 | 内容 |
+|---|---|
+| トピックバッジ | `押し入れ` |
+| シリーズラベル | `暮らしの間違い探し / 08` |
+| 見出し | `ここ、` / `NGが3つあります`(固定) |
+
+**一枚絵に描くもの**(押し入れ内部。上段・下段の棚がある構図)
+
+| 要素 | 位置 | 種別 |
+|---|---|---|
+| 内容表示のない段ボール(視認できる面に表示なし) | **下段** | **NG①(易)** |
+| 上段に置かれた荷物(かさばる箱・バッグ、**大きく目立つ描写**) | **上段**(目立ちやすさ優先) | **NG②(易)** |
+| 手前の箱の陰に、別の物の角が一部見える(**小さく**描写) | **下段・端** | **NG③(難・前景と背景)** |
+| 押し入れの枠・棚板 | 全体の骨格 | ダミー(正常・空間) |
+| きちんと畳まれた布団 | 下段中央 | ダミー(正常) |
+| ラベル付き収納ケース、整然と並ぶ | 上段・別区画 | ダミー(正常) |
+| ハンガーにかかった衣類 | 上段・端 | ダミー(正常) |
+| 季節家電の箱、きちんと積まれている | 下段・端 | ダミー(正常) |
+| 襖・換気の隙間 | 背景 | ダミー(正常・空間) |
+
+**解答テロップ(確定)**
+
+| # | 時間 | テロップ |
+|---|---|---|
+| ① | 10.00-11.33 | `この段ボール、` / `表示なしで置いていませんか` |
+| ② | 11.33-12.67 | `上段に、` / `荷物を置いていませんか` |
+| ③ | 12.67-14.00 | `奥の物の前に、` / `別の物を置いていませんか` |
+
+**CTA**: 動画`いくつ分かった? コメントで` / キャプション`いくつ分かった?コメントで`
+
+**キャプション**: 8ブロック確定(テーマ「押し入れ」、最初の一歩「まずは段ボールの中身を、確認するところから。」、ハッシュタグ5個)
+
+**事実主張**: 無(重量・持ち主の把握状況・取り出しにくさはすべて不採用として除外済み)
+
+### #8 押し入れ 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Follow #1's visual style/safe areas/timeline exactly(9-1章参照).
+SCENE: inside a Japanese closet(押し入れ)with upper and lower shelves,
+viewed from front.
+- NG1(easy): a cardboard box with NO visible label/content indication,
+  lower shelf.
+- NG2(easy): bulky items(large box/bag)on the UPPER shelf — draw LARGE
+  and prominent so it reads as easy despite being upper-positioned
+  (4章の標準解釈).
+- NG3(hard): on the lower shelf, near one edge, a small box in front of
+  another item — the item behind must be partially visible from 2.00s
+  onward, small/easy to overlook.
+- Dummies(normal): closet frame/shelves, neatly folded futon(lower
+  center), labeled storage cases(upper), hung clothes on a rod(upper
+  edge), stacked seasonal-appliance boxes(lower edge), a sliding door gap.
+Series label "暮らしの間違い探し / 08". Badge "押し入れ".
+[10.00-11.33] circle NG1 + "この段ボール、"/"表示なしで置いていませんか"
+[11.33-12.67] circle NG2 + "上段に、"/"荷物を置いていませんか"
+[12.67-14.00] circle NG3 + "奥の物の前に、"/"別の物を置いていませんか"
+HARD CONSTRAINTS same as #1: never assert weight, owner's awareness, or
+retrieval difficulty — describe only the visible placement.
+```
+
+---
+
+### 9-9. #9 子どものおもちゃ
+
+`【事実】` 2026-09-12、コーデックス経由でチャッピーから納品。**骨子変更承認**: NG②「子どもの
+手が届かない高さ」→「高い場所にあるおもちゃの収納」(到達範囲の断定を削除。**Claudeの8-1章では
+未検出だった問題をチャッピーが追加で発見**)、NG③「開けられず戻さなくなる」→「フタが閉じた
+収納ボックス」(将来行動を削除、状態のみ)。NG②は4章の標準解釈で大きく描画し易を担保。
+
+| 項目 | 内容 |
+|---|---|
+| トピックバッジ | `子どものおもちゃ` |
+| シリーズラベル | `暮らしの間違い探し / 09` |
+| 見出し | `ここ、` / `NGが3つあります`(固定) |
+
+**一枚絵に描くもの**(子ども部屋の一角。おもちゃ棚と床)
+
+| 要素 | 位置 | 種別 |
+|---|---|---|
+| 床に出ているおもちゃ | **下部** | **NG①(易)** |
+| 高い場所にあるおもちゃの収納(棚上段、**大きく目立つ描写**) | **上部**(目立ちやすさ優先) | **NG②(易)** |
+| フタが閉じた収納ボックス(**小さく**、他のオープンな箱と対比) | **端** | **NG③(難)** |
+| おもちゃ棚の枠・棚板 | 全体の骨格 | ダミー(正常・空間) |
+| オープンなおもちゃ箱、中身が見える状態 | 棚・下段(NG③との対比) | ダミー(正常) |
+| 絵本が並んだ棚 | 端 | ダミー(正常) |
+| ぬいぐるみ1つ、きちんと置かれている | 床・別位置 | ダミー(正常) |
+| 学習机の一角 | 背景 | ダミー(正常・空間) |
+| ラグ・カーペット | 床全体 | ダミー(正常・空間) |
+
+**解答テロップ(確定)**
+
+| # | 時間 | テロップ |
+|---|---|---|
+| ① | 10.00-11.33 | `おもちゃが、` / `床に出たままになっていませんか` |
+| ② | 11.33-12.67 | `おもちゃの収納、` / `高い場所にありませんか` |
+| ③ | 12.67-14.00 | `収納ボックスのフタ、` / `閉まっていませんか` |
+
+**CTA**: 動画`いくつ分かった? コメントで` / キャプション`いくつ分かった?コメントで`
+
+**キャプション**: 8ブロック確定(テーマ「子どものおもちゃ」、最初の一歩「まずはおもちゃの置き場所を、一緒に確認するところから。」、ハッシュタグ5個)
+
+**事実主張**: 無(子どもの到達範囲・開閉能力・将来の片付け行動はすべて不採用として除外済み)
+
+### #9 子どものおもちゃ 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Follow #1's visual style/safe areas/timeline exactly(9-1章参照).
+SCENE: a corner of a kids' room with a toy shelf and floor space.
+- NG1(easy): toys left out on the floor, lower area.
+- NG2(easy): toy storage on a HIGH shelf(upper shelf)— draw LARGE and
+  prominent bins/boxes so it reads as easy despite being upper-positioned.
+  Never depict a child figure or height reference.
+- NG3(hard): a storage box with its LID CLOSED, small, at one edge —
+  contrast with NG2's open/visible storage. Do not show or imply contents.
+- Dummies(normal): shelf frame, an open toy box with visible contents
+  (contrast to NG3), a picture-book shelf, one neatly placed stuffed
+  animal, a corner of a study desk, a rug.
+Series label "暮らしの間違い探し / 09". Badge "子どものおもちゃ".
+[10.00-11.33] circle NG1 + "おもちゃが、"/"床に出たままになっていませんか"
+[11.33-12.67] circle NG2 + "おもちゃの収納、"/"高い場所にありませんか"
+[12.67-14.00] circle NG3 + "収納ボックスのフタ、"/"閉まっていませんか"
+HARD CONSTRAINTS same as #1: never depict a child or imply reach/height,
+never assert future behavior("戻さなくなる"等), never show box contents.
+```
+
+---
+
+### 9-Q. クイズ枠 技術仕様(週1本相当)
+
+`【事実】` 2026-09-12、クイズ#1の納品を機に確定。企画書8-2章のタイムライン案を秒単位に確定。
+NG探しシリーズとは構成が異なり、**一枚絵ではなく2択比較(A/B 2画像)**を提示する。
+
+| カット | 時間 | 内容 |
+|---|---|---|
+| Q1 問題提示 | 0.00-2.00 | 見出し/問題文を表示。A/Bの絵を薄く表示開始 |
+| Q2 選択肢比較 | 2.00-6.00 | A/Bを並べて大きく表示(静止・比較時間) |
+| Q3 タメ | 6.00-7.00 | 「答えは...」1秒のみ |
+| Q4 解答 | 7.00-11.00 | 「答えはA」+理由テロップ |
+| Q5 補足 | 11.00-13.00 | 「Bは、〜」の補足テロップ |
+| Q6 CTA+ループ | 13.00-15.00 | CTA表示 → 冒頭へクロスフェード |
+
+**厳守事項**: NG探しと同じ(禁止語・形式A/B・答えを問題文に含めない等)。**選択肢は2択のみ**。
+正解は片方の画像内に明確に描かれた状態(視覚的に判別可能)とし、比較効果・効率性の主張はしない。
+
+### クイズ#1 靴下の収納(確定・原案から再設計)
+
+`【事実】` 2026-09-12、チャッピーが原案(「丸める方が探す時間が減る」という比較効果の主張)を
+差し戻し、「イラスト上でペアがそろっているのはどちらか」という**視覚判別クイズ**に再設計。
+比較効果の主張を一切含まない安全な形式のため承認。
+
+| 項目 | 内容 |
+|---|---|
+| シリーズラベル | `暮らしの間違い探し / クイズ01` |
+| 見出し/問題文 | `靴下の収納、` / `ペアがそろっているのはどっち?` |
+| 選択肢A | 同じ柄の靴下2枚が、ペアとして丸めてまとまっている(**同じ柄と視認できることが条件**) |
+| 選択肢B | Aと同じ柄の靴下だが、片方ずつ離れた位置に置かれている(**柄で判別、色だけに依存しない**) |
+| 正解 | A |
+
+**解答テロップ**: `答えはA` / `同じ柄がペアになっています`
+**補足テロップ**: `Bは、片方ずつ` / `別の場所にあります`
+**CTA**: `AとB、どっち?コメントで`
+
+**キャプション(確定)**
+
+```
+靴下の収納、ペアがそろっているのはどっち?👀
+
+今回のテーマは「靴下の収納」。
+イラストを見比べる、収納の2択クイズです。
+
+① Aは、同じ柄の靴下をペアで丸めた状態
+② Bは、片方ずつ別の場所に並べた状態
+③ このイラストの答えはA
+
+まずは引き出しの靴下を、見渡すところから。
+
+AとB、どっち?コメントで
+
+暮らしラク研究所｜@kurashi_rakulab
+毎日の「ちょっと面倒」を、少しラクに。
+
+※イラストは収納のイメージ図です。
+
+#靴下収納 #収納アイデア #片付け #暮らしの工夫 #暮らしラク研究所
+```
+
+**事実主張**: 無(「このイラストではA」に限定。丸める収納の一般的な優位性には広げない)
+
+### クイズ#1 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Create a vertical 9:16 video, 15.0s, 1080x1920, 30fps. Same visual style/
+safe areas as #1(9-1章参照). Quiz format per 9-Q章 timeline(not NG-finding).
+TWO illustrations side by side(A left, B right), a sock drawer scene:
+- A: two same-pattern socks rolled together as a matched pair, clearly
+  showing 2 socks of the same pattern in one roll.
+- B: the SAME sock pattern as A, but split — one sock here, its match
+  placed separately elsewhere in frame. Differentiate by PATTERN shape,
+  not color alone.
+[0.00-2.00] Headline "靴下の収納、"/"ペアがそろっているのはどっち?". A/B fade in.
+[2.00-6.00] Show A and B large, side by side, static.
+[6.00-7.00] "答えは..."(1s only).
+[7.00-11.00] Reveal: "答えはA" / "同じ柄がペアになっています".
+[11.00-13.00] "Bは、片方ずつ" / "別の場所にあります".
+[13.00-15.00] CTA "AとB、どっち?コメントで". Loop to 0.00.
+HARD CONSTRAINTS: never claim rolling is more efficient/faster to find
+than flat storage — the answer is scoped to THIS illustration only. No
+brand/logo. Never put the answer inside the question text.
+```
+
+---
+
+### クイズ#2 ネックレスの収納(確定・原案から再設計)
+
+`【事実】` 2026-09-12、チャッピーが原案(「絡まりにくい」という傾向比較、対象は
+「アクセサリー」全般)を差し戻し。**一次情報(Gruno's Diamonds公式記事)で個別フック収納の
+案内は確認できたが、AB比較試験結果ではないため比較効果の主張には使わないと判断。**
+「出典が見つかったことだけを理由に、形式A/Bの制約を外さない」という規律が正しく機能した事例。
+対象を「チェーンのネックレス」に限定し、「重なっていないのはどっち?」という視覚判別クイズに再設計。
+
+| 項目 | 内容 |
+|---|---|
+| シリーズラベル | `暮らしの間違い探し / クイズ02` |
+| 見出し/問題文 | `ネックレスの収納、` / `重なっていないのはどっち?` |
+| 選択肢A | ネックレスが個別のフックに掛けられ、チェーン同士が離れている(**正解**) |
+| 選択肢B | 開いた箱の中に、複数のネックレスのチェーンが重なっている(結び目や絡まりまでは描かない) |
+| 正解 | A |
+
+**解答テロップ**: `答えはA` / `チェーン同士が離れています`
+**補足テロップ**: `Bは箱の中で、` / `チェーン同士が重なっています`
+**CTA**: `AとB、どっち?コメントで`
+
+**構図要件**: A・Bは同じ本数・形状のネックレスを使用し、色ではなく形状(ペンダントの形・
+チェーンの長さ等)で判別できること。Bは「重なり」のみを示し、結び目や絡まりは描かない
+(誇張しない)。解答時に重なりを追加・変更しない。箱を使うこと自体の否定には広げない。
+
+**キャプション(確定)**
+
+```
+ネックレスの収納、重なっていないのはどっち?👀
+
+今回のテーマは「ネックレスの収納」。
+イラストを見比べる、収納の2択クイズです。
+
+① Aは、1本ずつ離して掛けた状態
+② Bは、箱の中でチェーン同士が重なった状態
+③ このイラストの答えはA
+
+まずはネックレスの置き場所を、見渡すところから。
+
+AとB、どっち?コメントで
+
+暮らしラク研究所｜@kurashi_rakulab
+毎日の「ちょっと面倒」を、少しラクに。
+
+※イラストは収納のイメージ図です。
+
+#アクセサリー収納 #収納アイデア #片付け #暮らしの工夫 #暮らしラク研究所
+```
+
+**事実主張**: 無(出典は参考にとどめ、公開原稿には反映しない。「このイラストではA」に限定)
+
+### クイズ#2 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Create a vertical 9:16 video, 15.0s, 1080x1920, 30fps. Same visual style/
+safe areas as #1(9-1章参照). Quiz format per 9-Q章 timeline.
+TWO illustrations side by side(A left, B right), a necklace storage scene:
+- A: necklaces hung on individual hooks, chains clearly separated from
+  each other, not touching.
+- B: the SAME necklaces(same count/shapes)as A, but placed in an open box
+  where their chains visibly overlap/cross each other. Do NOT draw knots
+  or tangled loops — only overlapping chains. Differentiate necklaces by
+  SHAPE(pendant shape, chain length), not color alone.
+[0.00-2.00] Headline "ネックレスの収納、"/"重なっていないのはどっち?". A/B fade in.
+[2.00-6.00] Show A and B large, side by side, static.
+[6.00-7.00] "答えは..."(1s only).
+[7.00-11.00] Reveal: "答えはA" / "チェーン同士が離れています".
+[11.00-13.00] "Bは箱の中で、" / "チェーン同士が重なっています".
+[13.00-15.00] CTA "AとB、どっち?コメントで". Loop to 0.00.
+HARD CONSTRAINTS: never claim hanging storage prevents tangling in general
+— the answer is scoped to THIS illustration only("重なり"のみ、"絡まり"
+とは言わない). Never imply box storage is wrong in general. No brand/logo.
+Never put the answer inside the question text.
+```
+
+---
+
 ## 10. HyperFrames 生成プロンプト雛形(参考・現在は未使用)
 
 `【事実】` 2026-09-11時点、コーデックスの実行環境ではHyperFramesが使えないため、
@@ -1533,3 +1903,4 @@ HARD CONSTRAINTS:
 | 2026-09-12 | **#10食品ストックを確定**。A案確定文言を正確に反映した納品を受け、禁止事項チェック合格。NG②(同じ食品が2箇所に分かれている)は標準の1NG=1円では表現できないため、縦長楕円ハイライトへの例外を承認(9-10章に明記、他NGには適用しない)。一枚絵の配置を確定 |
 | 2026-09-12 | **#5洗面所を納品**。設計書11章チェックリスト17項目合格。解答円と支持面の重なりを#1の前例と同様Lowと評価。エンコードは標準H.264 High/yuv420p、音声尺も映像と完全一致。費用の状況証拠をClaudeが6回目の独立確認(変化なし) |
 | 2026-09-12 | **#10食品ストックを納品**。設計書11章チェックリスト17項目合格。NG②の楕円ハイライト(幅160px・高さ292px)が承認済み例外どおり実装されたことを確認。支持面との重なりを#1・#5と同種のLow評価とした。費用の状況証拠をClaudeが7回目の独立確認(変化なし) |
+| 2026-09-12 | **#6リビング・#8押し入れ・#9子どものおもちゃ・クイズ#1・#2を確定**。4章に「易/難は目立ちやすさが本質」という標準解釈と、複数円/楕円の例外ルールを追加。#6のNG③(リモコン3箇所)は複数円の新例外を承認。#8・#9はチャッピー提出の骨子変更(重量・到達範囲・将来行動の断定を削除)を承認。9-Q章にクイズ枠の技術仕様を新設し、クイズ#1・#2を原案の比較効果の主張から視覚判別クイズへ再設計 |
