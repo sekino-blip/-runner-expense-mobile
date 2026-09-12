@@ -642,7 +642,144 @@ Metricoolへの下書き登録で、Instagram側が受理するかも合わせ�
 
 ---
 
-## 10. HyperFrames 生成プロンプト雛形(参考・現在は未使用)
+### 9-2. #2 シンク下
+
+`【事実】` 2026-09-11、コーデックス経由でチャッピーから納品。文言はチャッピーの裏取り済み
+(形式Aのみ、外部照合対象なし)。一枚絵の要素配置はClaudeが確定(工程5)。
+
+| 項目 | 内容 |
+|---|---|
+| トピックバッジ | `シンク下` |
+| シリーズラベル | `暮らしの間違い探し / 02` |
+| 見出し | `ここ、` / `NGが3つあります`(固定・変更なし) |
+
+**一枚絵に描くもの**(シンク下収納棚の内部を正面から見た構図。扉は開いた状態)
+
+| 要素 | 位置 | 種別 |
+|---|---|---|
+| 洗剤のストック(同一形状のボトルが3〜4本、列をなして並ぶ) | **下部左** | **NG①(易)** |
+| 排水管まわりに直置きされた小物(スポンジ・ブラシ・布巾など、**NG①とは異なる形状**の物が数点、無造作に置かれている) | **中央下部**(排水管の根元) | **NG②(易)** |
+| 重ねて収納された鍋2つ(下の鍋の一部が上の鍋に隠れて見えにくい) | **上部やや右**(小さめに) | **NG③(難)** |
+| 収納棚の内部フレーム(枠・棚板) | 全体の骨格 | ダミー(正常・空間) |
+| ゴミ袋のロール、ケースに収まりきちんと巻かれている | 右上 | ダミー(正常) |
+| ゴム手袋、フックに掛けてある | 右下 | ダミー(正常) |
+| 排水管本体(構造物) | 中央奥 | ダミー(正常・空間) |
+| スポンジのストック、ケースに収まっている | 左上 | ダミー(正常) |
+| キッチンペーパーの替え、立てて置かれている | 中央やや左 | ダミー(正常) |
+
+**NG①・NG②の判別ルール(チャッピーの確認事項#3への対応)**: NG①は**同一形状のボトルの列**、
+NG②は**形状の異なる複数の小物が排水管の根元に集まっている状態**とし、形状差で視覚的に区別する。
+両者は画面内で離して配置し(4章ルール)、混同を避ける。
+
+**解答テロップ(C4)** ← **確定(チャッピー納品版。形式Aのみで構成、出典不要)**
+
+| # | 時間 | テロップ |
+|---|---|---|
+| ① | 10.00-11.33 | `洗剤のストック、` / `並んでいませんか` |
+| ② | 11.33-12.67 | `排水管のまわりに、` / `物を直置きしていませんか` |
+| ③ | 12.67-14.00 | `下の鍋に、別の鍋が` / `重なっていませんか` |
+
+**③が「難」である理由**: 設計上、上部やや右に小さく配置するため。加えて、鍋が収納されていること
+自体は不自然ではなく、**上下の重なりに気づく必要がある**点が難易度を上げる `【推測】`(チャッピー提出の
+理由をClaudeが配置に反映)。
+
+**CTA(確定)**: `いくつ分かった? コメントで`
+
+**キャプション(確定)**
+
+```
+ここ、NGが3つあります👀
+
+今回のテーマは「シンク下」。
+片付けの視点で探す、暮らしの間違い探しです。
+
+① 並んだ洗剤のストック
+② 排水管まわりに直置きされた物
+③ 重ねて収納された鍋
+
+まずはシンク下に何があるか、見渡すところから。
+
+いくつ分かった?コメントで
+
+暮らしラク研究所｜@kurashi_rakulab
+毎日の「ちょっと面倒」を、少しラクに。
+
+※イラストは収納のイメージ図です。
+
+#間違い探し #収納アイデア #片付け #暮らしの工夫 #暮らしラク研究所
+```
+
+**事実主張**: 無(形式Aのみ。外部の裏付けが必要な主張は含まれない)
+
+**チャッピーからの確認事項への回答(Claude)**
+
+| # | チャッピーの確認事項 | Claudeの回答 |
+|---|---|---|
+| 1 | 原案の本数は描画設定として維持可能か、適正数の基準として使うか | **描画のみに使用。基準として主張しない。**「何本以上がNG」という記述は一切行わない |
+| 2 | 「見直す箇所」として扱う企画意図で成立するか | **成立する。** 8章の既存ルール(「NGは悪ではなく使いにくくなる理由として説明」「断定形を避ける」)そのものであり、新しい解釈ではない。**この解釈を標準として以降の全シーンに適用する**(下記「標準解釈」参照) |
+| 3 | NG①とNG②を別対象として判別できる必要がある | 上記「NG①・NG②の判別ルール」で一枚絵の設計により対応 |
+
+### #2 シンク下 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Create a vertical 9:16 video, exactly 15.0 seconds, 1080x1920, 30fps.
+Follow the same visual style, safe areas, and timeline structure as
+#1 玄関(9-1章参照)exactly — only the scene illustration and captions differ.
+
+SCENE ILLUSTRATION (one single static drawing, used across the whole video):
+Setting: the interior of an under-sink kitchen cabinet, viewed from the front
+with the cabinet doors open.
+- NG1 (easy): a row of 3-4 identical-shaped detergent refill bottles lined up,
+  positioned bottom-left. Draw a specific count for visual purposes only —
+  this is NOT asserting any "too many" threshold.
+- NG2 (easy): a small cluster of DIFFERENTLY-SHAPED items (a sponge, a scrub
+  brush, a folded rag) placed directly on the cabinet floor around the base
+  of a drain pipe, positioned center-bottom. Must be visually distinct in
+  shape from NG1's uniform bottle row — do not reuse bottle-like shapes here.
+- NG3 (hard): two stacked pots, positioned upper-right, drawn small — the
+  lower pot is partially hidden under the upper one.
+- Dummy items, all drawn in a NORMAL tidy state: the cabinet's internal frame/
+  shelving (structural), a roll of trash bags neatly cased (upper-right), a
+  pair of rubber gloves hung on a hook (bottom-right), the drain pipe itself
+  (structural, center-back), a spare sponge in a case (upper-left), a spare
+  roll of paper towels standing upright (center-left).
+Keep NG1/NG2/NG3 spaced apart from each other and from dummy items so their
+160px-diameter answer circles won't overlap anything else.
+
+TIMELINE: identical structure to #1(9-1章参照). Only these texts differ:
+[0.00-2.00] Series label "暮らしの間違い探し / 02". Terracotta badge
+  "シンク下". Headline "ここ、" / "NGが3つあります"(固定・変更なし).
+[10.00-11.33] circle on NG1 + caption: "洗剤のストック、" / "並んでいませんか"
+[11.33-12.67] circle on NG2 + caption: "排水管のまわりに、" / "物を直置きしていませんか"
+[12.67-14.00] circle on NG3 + caption: "下の鍋に、別の鍋が" / "重なっていませんか"
+[14.00-15.00] Caption: "いくつ分かった? コメントで". Loop per #1's spec
+  (cross-fade from 14.70 to 15.00, no closing end-card).
+
+HARD CONSTRAINTS: same as #1(6章参照)。特に:
+- Never mention bacteria, germs, hygiene, disinfection, or food safety.
+- Never state a specific quantity as a "correct" or "too many" threshold.
+- Never assert future behavior (e.g., "the bottom pot will never be used
+  again") — use only the exact caption text given above.
+- Never put the answer inside the question text.
+```
+
+---
+
+### 標準解釈: 「NG」表記と「見直す箇所」の関係(全シーン共通・確定)
+
+`【事実】` 2026-09-11、#2シンク下のチャッピーからの確認を機に明文化。**以降、同種の確認は不要。**
+
+シリーズの決め台詞は「NGが3つあります」だが、これは**キャッチーな見出し表現**であり、
+個々の解答テロップで「これは悪いことです」と断定するものではない。8章の表現ルール
+(「NGは悪ではなく使いにくくなる理由として説明する」「断定形を避ける」)がこの関係を規定している。
+
+- 見出し・バッジ: 「NG」という強い言葉をそのまま使ってよい(フックとして機能させる)
+- 解答テロップ: 「〜していませんか」という**問いかけ**の形にとどめ、断定・基準・将来予測を含めない
+- この2層構造(キャッチーな見出し + 控えめな解説)が、本シリーズの標準スタイルである
+
+---
+
+
 
 `【事実】` 2026-09-11時点、コーデックスの実行環境ではHyperFramesが使えないため、
 **本章は使用しない。** Higgsedit/FFmpegでの制作は9-0章のパラメータと、9章末尾の
@@ -760,6 +897,7 @@ HARD CONSTRAINTS:
 | 2026-09-11 | **#1玄関 納品を記録**。コーデックス納品(プロジェクトID genkan01-realism)を9章末尾に記録。バッジ色の留保を解決。費用の状況証拠をClaudeが独立に再確認(残高・取引履歴とも変化なし)。エンコードプロファイルの互換性未検証をMedium課題として記録し、実機確認を次工程の必須ゲートに設定 |
 | 2026-09-11 | **A-2/A-3承認、A-8方針確定**。BGMなしで確定。毎日投稿(週7本、間違い探し6本+クイズ1本)。企画書8-2章に「クイズ枠」の新ルールを新設(旧「暮らしの豆知識帳/01」は不採用のまま) |
 | 2026-09-11 | **連携フローを変更**。コーデックスがチャッピーとの窓口を担当することに変更(0-2-1新設)。0-1/0-2/0-3を更新し、コーデックスの新たな禁止事項(ルールの省略・改変禁止)を追加。Claudeの最終レビュー工程は不変 |
+| 2026-09-12 | **#2シンク下を確定**。コーデックス経由でチャッピーから納品を受け、禁止事項チェック合格。一枚絵の要素配置をClaudeが確定(9-2章)。チャッピーの3つの確認事項に回答し、「NGと見直す箇所」の標準解釈を明文化(以降の全シーン共通ルール) |
 | 2026-09-11 | 9/8との色照合結果(RGB差3以内)を反映。テラコッタが文字採取値である留保を追記し、11章チェックリストにバッジ目視確認を追加。既存動画の尺(20.000秒/600フレーム)を12章で解決済みに更新。費用の状況証拠(残高・取引履歴)を12章に追記 |
 | 2026-09-11 | **色を確定**。コーデックスが9/9投稿から抽出した値(背景#F6F1E5・深緑#24473E・テラコッタ#E0785E)を9-0章に反映。9/8との照合は未実施と明記 |
 | 2026-09-11 | 0-6-1に既存2本のMP4 URLを追記(コーデックスからの依頼に対応) |
