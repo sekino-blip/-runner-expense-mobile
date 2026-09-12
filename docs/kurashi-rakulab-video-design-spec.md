@@ -1214,6 +1214,148 @@ HARD CONSTRAINTS: same as #1(6章参照)。特に:
 
 ---
 
+### 9-10. #10 食品ストック
+
+`【事実】` 2026-09-12、コーデックス経由でチャッピーから納品。企画書8章のA案確定文言
+(2026-09-12承認)を正確に反映。賞味期限・使用実態・購入履歴・将来行動への言及なし。
+一枚絵の要素配置はClaudeが確定(工程5)。
+
+| 項目 | 内容 |
+|---|---|
+| トピックバッジ | `食品ストック` |
+| シリーズラベル | `暮らしの間違い探し / 10` |
+| 見出し | `ここ、` / `NGが3つあります`(固定・変更なし) |
+
+**設計上の例外(承認・2026-09-12)**: NG②「同じ食品が2箇所に分かれている」は、通常の
+1NG=1解答円(160px円)では表現できない。**同一の戸棚内で近接する2段(中段・下段)に配置し、
+円ではなく縦長の楕円形ハイライトで両方を1つの範囲として囲む例外を承認する。**
+これは9-0章の標準仕様(円・160px直径)からの明示的な例外であり、他のNGには適用しない。
+
+**一枚絵に描くもの**(食品ストック棚を正面から見た構図。戸棚と床置きスペースを両方描く)
+
+| 要素 | 位置 | 種別 |
+|---|---|---|
+| 袋のまま床に置かれた食品(米・パスタ袋等。ブランド・ロゴなし) | **床下部** | **NG①(易)** |
+| 同一形状・柄の食品パッケージ(缶詰等)が、同じ戸棚の中段・下段に分かれて置かれている | **中央棚・中段+下段(近接)** | **NG②(易・楕円ハイライト)** |
+| 手前の食品(箱型)の陰から、奥の食品(別容器)の角が一部見える | **上部棚・奥・端寄り** | **NG③(難・前景と背景の組み合わせ)** |
+| 食品棚のフレーム・棚板 | 全体の骨格 | ダミー(正常・空間) |
+| 種類の異なる食品が整然と並んだ区画(NG②との対比) | 別の棚 | ダミー(正常) |
+| ラベル付き保存容器、整然と並んでいる | 棚・端 | ダミー(正常) |
+| 畳んでまとめられた買い物袋 | 棚・端 | ダミー(正常) |
+| 調味料の予備1本、きちんと立てて置かれている | 棚・端 | ダミー(正常) |
+| 重ねて置かれた空のかご | 床・端 | ダミー(正常) |
+
+**チャッピーの4つの描画確認事項への対応**
+
+| # | 確認事項 | Claudeの対応 |
+|---|---|---|
+| 1 | NG①は床との接触が見え、棚板・ケースの上と区別できること | 床に直接置かれた状態として描画。棚上の食品と混同しない位置に配置 |
+| 2 | NG②は同じ食品と識別できる形状・図柄をそろえ、実在の商品名・ロゴを使わない | 同一形状の抽象的な缶型パッケージで統一。ブランド要素は一切描画しない |
+| 3 | NG③は奥の食品の角が探す時間から常に一部見えること。解答で初出させない | #3・#4・#5と同じ「隠れた奥の物」原則を適用 |
+| 4 | NG①②③を別対象とし兼用しない | 床(①)・中央棚(②)・上部棚(③)と、領域そのものを分離 |
+| — | NG②の解答円が標準仕様で成立しない場合の扱い | 上記「設計上の例外」で楕円ハイライトを承認 |
+
+**解答テロップ(C4)** ← **確定(チャッピー納品版。形式Aのみで構成、出典不要)**
+
+| # | 時間 | テロップ |
+|---|---|---|
+| ① | 10.00-11.33 | `食品を袋のまま、` / `床に置いていませんか` |
+| ② | 11.33-12.67 | `同じ食品が、` / `別々の場所にありませんか` |
+| ③ | 12.67-14.00 | `手前の食品で、` / `奥の食品が隠れていませんか` |
+
+**③が「難」である理由**: 設計上、上部棚の奥・端寄りに配置するため。手前の食品の後ろに
+一部見える食品へ注意を向ける必要がある点が難易度を上げる `【推測】`。実際の難易度
+(視聴者による検証)は未実施。
+
+**CTA**: 動画内テロップは `いくつ分かった? コメントで`(半角スペースあり)。
+キャプション内は `いくつ分かった?コメントで`(スペースなし)。
+
+**キャプション(確定)**
+
+```
+ここ、NGが3つあります👀
+
+今回のテーマは「食品ストック」。
+片付けの視点で探す、暮らしの間違い探しです。
+
+① 袋のまま床に置かれた食品
+② 別々の場所に置かれた同じ食品
+③ 手前の食品に隠れた奥の食品
+
+まずは食品の置き場所を、見渡すところから。
+
+いくつ分かった?コメントで
+
+暮らしラク研究所｜@kurashi_rakulab
+毎日の「ちょっと面倒」を、少しラクに。
+
+※イラストは収納のイメージ図です。
+
+#間違い探し #収納アイデア #片付け #暮らしの工夫 #暮らしラク研究所
+```
+
+**事実主張**: 無(形式Aのみ。賞味期限・使用実態・購入履歴・将来行動・適正数の主張は
+すべて不採用として除外済み)
+
+### #10 食品ストック 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Create a vertical 9:16 video, exactly 15.0 seconds, 1080x1920, 30fps.
+Follow the same visual style, safe areas, and timeline structure as
+#1 玄関(9-1章参照)exactly — only the scene illustration, captions, and
+NG2's highlight shape (see below) differ.
+
+SCENE ILLUSTRATION (one single static drawing, used across the whole video):
+Setting: a food-stock pantry area, viewed from the front, showing both a
+cabinet with shelves and floor storage space.
+- NG1 (easy): a bag of food (e.g., rice or pasta bag, NO brand/logo) placed
+  directly on the floor, positioned lower area.
+- NG2 (easy): identical-shaped food packages (e.g., generic cans, NO brand/
+  logo) split between two adjacent shelves (middle and lower) of the SAME
+  cabinet unit, positioned close together vertically so both fit within
+  one highlight area.
+- NG3 (hard): on an upper shelf, toward the back and one edge, a box-shaped
+  food item sits in front of another container — the container behind must
+  be PARTIALLY VISIBLE (a corner or edge peeking out) throughout the search
+  phase. Do NOT introduce this hidden item only at the answer reveal.
+- Dummy items, all drawn in a NORMAL tidy state: the pantry frame/shelving
+  (structural), a section with clearly DIFFERENT food items neatly arranged
+  (contrast to NG2), labeled storage containers neatly lined up, folded
+  shopping bags grouped together, one spare condiment bottle standing
+  upright, and empty baskets stacked neatly on the floor.
+Keep NG1/NG2/NG3 spaced apart from each other and from dummy items.
+
+**IMPORTANT EXCEPTION for NG2's answer highlight**: unlike every other NG in
+this series (which use a single 160px-diameter outline circle), NG2 requires
+an ELONGATED VERTICAL OVAL outline (terracotta, no fill) that encompasses
+BOTH the middle-shelf and lower-shelf items together, since NG2 depicts one
+concept split across two nearby locations. This is an approved, one-time
+exception — do not apply this oval shape to NG1 or NG3, which use the
+standard circle.
+
+TIMELINE: identical structure to #1(9-1章参照). Only these texts differ:
+[0.00-2.00] Series label "暮らしの間違い探し / 10". Terracotta badge
+  "食品ストック". Headline "ここ、" / "NGが3つあります"(固定・変更なし).
+[10.00-11.33] circle on NG1 + caption: "食品を袋のまま、" / "床に置いていませんか"
+[11.33-12.67] OVAL(see exception above) on NG2 + caption: "同じ食品が、" / "別々の場所にありませんか"
+[12.67-14.00] circle on NG3 + caption: "手前の食品で、" / "奥の食品が隠れていませんか"
+[14.00-15.00] Caption: "いくつ分かった? コメントで"(半角スペースに注意). Loop per
+  #1's spec(cross-fade from 14.70 to 15.00, no closing end-card).
+
+HARD CONSTRAINTS: same as #1(6章参照)。特に:
+- Never mention bacteria, germs, hygiene, disinfection, or food safety
+  (this is a food-storage scene — no expiration/freshness/spoilage claims
+  of any kind).
+- Never assert purchase history (e.g., "duplicate items were bought") or
+  usage patterns.
+- No brand names, product names, or logos anywhere in the illustration.
+- Never introduce NG3's hidden item only at the reveal — it must be
+  partially visible from 2.00s onward.
+- Never put the answer inside the question text.
+```
+
+---
+
 ## 10. HyperFrames 生成プロンプト雛形(参考・現在は未使用)
 
 `【事実】` 2026-09-11時点、コーデックスの実行環境ではHyperFramesが使えないため、
@@ -1347,3 +1489,4 @@ HARD CONSTRAINTS:
 | 2026-09-12 | **#3冷蔵庫の中を納品**。設計書11章チェックリスト17項目合格。NG③(隠れた保存容器)の視認性を拡大比較画像で重点検証。エンコードは#2と同じ標準H.264 High/yuv420p、音声尺も映像と完全一致。費用の状況証拠をClaudeが4回目の独立確認(変化なし) |
 | 2026-09-12 | **#4クローゼットを納品**。設計書11章チェックリスト17項目合格。NG②の形状差描写、NG③の視認性(210フレーム同一ピクセル)を重点検証済み。エンコードは#2・#3と同じ標準H.264 High/yuv420p。費用の状況証拠をClaudeが5回目の独立確認(変化なし) |
 | 2026-09-12 | **#5洗面所を確定**。コーデックス経由でチャッピーから納品を受け、禁止事項チェック合格。当初想定していた「振動で落ちやすい」という表現もチャッピーが自主的に不採用と判断(形式Bの基準を厳密に満たさないため)。一枚絵の配置を9-5章に確定 |
+| 2026-09-12 | **#10食品ストックを確定**。A案確定文言を正確に反映した納品を受け、禁止事項チェック合格。NG②(同じ食品が2箇所に分かれている)は標準の1NG=1円では表現できないため、縦長楕円ハイライトへの例外を承認(9-10章に明記、他NGには適用しない)。一枚絵の配置を確定 |
