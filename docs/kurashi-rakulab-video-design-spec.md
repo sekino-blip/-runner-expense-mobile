@@ -907,6 +907,132 @@ HARD CONSTRAINTS: same as #1(6章参照)。特に:
 
 ---
 
+### 9-4. #4 クローゼット
+
+`【事実】` 2026-09-15、コーデックス経由でチャッピーから納品。**骨子変更を承認**:
+NG③は当初案「『いつか着る服』が一番取りやすい高さを占領している」(着用意図・主観的な
+便利さの断定を含み描画で確認不能)から、「手前の服に隠れた奥の服」(服の重なりのみ)に変更。
+企画書8章の該当行もこれに合わせて更新済み。
+
+| 項目 | 内容 |
+|---|---|
+| トピックバッジ | `クローゼット` |
+| シリーズラベル | `暮らしの間違い探し / 04` |
+| 見出し | `ここ、` / `NGが3つあります`(固定・変更なし) |
+
+**一枚絵に描くもの**(クローゼット内部を正面から見た構図。ハンガーラックと床を両方描く)
+
+| 要素 | 位置 | 種別 |
+|---|---|---|
+| 紙袋2〜3個が床に並ぶ | **床下部** | **NG①(易)** |
+| 針金ハンガーと幅広の成形ハンガーが混在(**形状差**で判別。色に依存しない) | **ラック中央** | **NG②(易)** |
+| 手前の服(厚手のコートなど)の脇から、奥の服の袖・裾が一部見える | **ラック上部・端寄り** | **NG③(難・前景と背景の組み合わせ)** |
+| クローゼットの枠・ラックバー | 全体の骨格 | ダミー(正常・空間) |
+| 揃ったハンガー(同一形状)が並ぶ区画 | ラック反対側 | ダミー(正常。NG②との対比) |
+| 畳まれたセーター、棚の上に整然と積まれている | 上部棚 | ダミー(正常) |
+| 収納ケース、ラベル付きで床に並んでいる | 床・NG①と離れた位置 | ダミー(正常) |
+| 季節物ケース、床の隅にきちんと置かれている | 床・隅 | ダミー(正常) |
+| 姿見または扉の一部 | 奥・背景 | ダミー(正常・空間) |
+
+**NG②・NG③の判別ルール(チャッピーの確認事項1・2への対応)**: NG②(ハンガー混在)は
+ラック中央に、NG③(服の重なり)はラック端に配置し、**別々の衣服・ハンガー群として重複させない。**
+NG②は形状差(細い針金 vs 幅広の成形樹脂)で判別させ、色の違いには依存しない。
+
+**解答テロップ(C4)** ← **確定(チャッピー納品版。形式Aのみで構成、出典不要)**
+
+| # | 時間 | テロップ |
+|---|---|---|
+| ① | 10.00-11.33 | `クローゼットの床に、` / `紙袋が並んでいませんか` |
+| ② | 11.33-12.67 | `ハンガーの種類、` / `混ざっていませんか` |
+| ③ | 12.67-14.00 | `手前の服で、` / `奥の服が隠れていませんか` |
+
+**③が「難」である理由**: 設計上、ラック上部・端寄りに配置するため。加えて、手前の服だけでなく
+その後ろに一部見える服へ注意を向ける必要がある点が難易度を上げる `【推測】`。実際の難易度
+(視聴者による検証)は未実施。**#3で確立した「奥の物は探す時間から一部見えている」原則を
+本シーンにも適用**(探す時間中、奥の服の袖・裾が常に一部視認できる状態を維持し、解答時に
+初めて追加したり手前の服を動かして見せたりしない)。
+
+**CTA**: 動画内テロップは `いくつ分かった? コメントで`(半角スペースあり)。
+キャプション内は `いくつ分かった?コメントで`(スペースなし、#1〜#3と同一表記)。
+
+**キャプション(確定)**
+
+```
+ここ、NGが3つあります👀
+
+今回のテーマは「クローゼット」。
+片付けの視点で探す、暮らしの間違い探しです。
+
+① 床に並んだ紙袋
+② 種類の異なるハンガーの混在
+③ 手前の服に隠れた奥の服
+
+まずは床の紙袋を、使う物かどうか見直すところから。
+
+いくつ分かった?コメントで
+
+暮らしラク研究所｜@kurashi_rakulab
+毎日の「ちょっと面倒」を、少しラクに。
+
+※イラストは収納のイメージ図です。
+
+#間違い探し #収納アイデア #片付け #暮らしの工夫 #暮らしラク研究所
+```
+
+**事実主張**: 無(形式Aのみ。着用意図・使用実態・効果・適正数の主張はすべて不採用として除外済み)
+
+### #4 クローゼット 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Create a vertical 9:16 video, exactly 15.0 seconds, 1080x1920, 30fps.
+Follow the same visual style, safe areas, and timeline structure as
+#1 玄関(9-1章参照)exactly — only the scene illustration and captions differ.
+
+SCENE ILLUSTRATION (one single static drawing, used across the whole video):
+Setting: the interior of a closet, viewed from the front, showing a hanging
+rod with clothes and floor space below.
+- NG1 (easy): 2-3 paper shopping bags lined up on the floor, positioned
+  bottom area.
+- NG2 (easy): on the rod, center section, a mix of thin wire hangers and
+  wide molded-plastic hangers — differentiate by SHAPE only (thin wire vs.
+  wide molded), not by color, since the line-art style uses minimal color.
+- NG3 (hard): on the rod, toward one end and upper area, a thick coat/jacket
+  hangs in front of another garment — the garment behind must be PARTIALLY
+  VISIBLE (a sleeve or hem peeking out from the side) throughout the search
+  phase. Do NOT introduce this hidden garment only at the answer reveal, and
+  do NOT move the front garment aside to reveal it then.
+- Dummy items, all drawn in a NORMAL tidy state: the closet frame/rod
+  (structural), a section of uniformly-shaped hangers on the opposite side
+  of the rod (contrast to NG2), neatly folded sweaters stacked on a shelf
+  above, a labeled storage case on the floor (away from NG1), a seasonal
+  storage case tucked neatly in a floor corner, and part of a mirror or door
+  in the background.
+Keep NG1/NG2/NG3 spaced apart from each other and from dummy items so their
+160px-diameter answer circles won't overlap anything else. NG2 and NG3 must
+be clearly separate clusters of hangers/clothes — do not let them share the
+same garments.
+
+TIMELINE: identical structure to #1(9-1章参照). Only these texts differ:
+[0.00-2.00] Series label "暮らしの間違い探し / 04". Terracotta badge
+  "クローゼット". Headline "ここ、" / "NGが3つあります"(固定・変更なし).
+[10.00-11.33] circle on NG1 + caption: "クローゼットの床に、" / "紙袋が並んでいませんか"
+[11.33-12.67] circle on NG2 + caption: "ハンガーの種類、" / "混ざっていませんか"
+[12.67-14.00] circle on NG3(奥の服側) + caption: "手前の服で、" / "奥の服が隠れていませんか"
+[14.00-15.00] Caption: "いくつ分かった? コメントで"(半角スペースに注意). Loop per
+  #1's spec(cross-fade from 14.70 to 15.00, no closing end-card).
+
+HARD CONSTRAINTS: same as #1(6章参照)。特に:
+- Never assert wearing intent (e.g., "these clothes will be worn someday")
+  or subjective convenience (e.g., "this height is easiest to reach").
+- Never introduce NG3's hidden garment only at the reveal — it must be
+  partially visible from 2.00s onward.
+- Do not rely on color alone to show NG2's hanger-type difference — use
+  distinct shapes (thin wire vs. wide molded).
+- Never put the answer inside the question text.
+```
+
+---
+
 ## 10. HyperFrames 生成プロンプト雛形(参考・現在は未使用)
 
 `【事実】` 2026-09-11時点、コーデックスの実行環境ではHyperFramesが使えないため、
@@ -1027,6 +1153,7 @@ HARD CONSTRAINTS:
 | 2026-09-11 | **連携フローを変更**。コーデックスがチャッピーとの窓口を担当することに変更(0-2-1新設)。0-1/0-2/0-3を更新し、コーデックスの新たな禁止事項(ルールの省略・改変禁止)を追加。Claudeの最終レビュー工程は不変 |
 | 2026-09-12 | **#2シンク下を確定**。コーデックス経由でチャッピーから納品を受け、禁止事項チェック合格。一枚絵の要素配置をClaudeが確定(9-2章)。チャッピーの3つの確認事項に回答し、「NGと見直す箇所」の標準解釈を明文化(以降の全シーン共通ルール) |
 | 2026-09-12 | **#3冷蔵庫の中を確定**。コーデックス経由でチャッピーから納品を受け、禁止事項チェック合格(前回からの改善: ①の使用実態への言及を排除、②の解答を問いかけ形に統一)。チャッピーの6つの描画確認事項に対応し、9-3章に一枚絵の配置を確定。NG③(奥の物)は探す時間から一部視認できる設計とし、解答で初出させない原則を明記 |
+| 2026-09-15 | **#4クローゼットを確定**。チャッピー提案の骨子変更(NG③『いつか着る服』→『手前の服に隠れた奥の服』)を承認。9-4章に一枚絵の配置を確定。企画書8章の全14シーンを事前チェックし、#5以降に残る同種の問題(使用実態・将来行動・頻度の断定)を洗い出した(企画書8-1章) |
 | 2026-09-11 | 9/8との色照合結果(RGB差3以内)を反映。テラコッタが文字採取値である留保を追記し、11章チェックリストにバッジ目視確認を追加。既存動画の尺(20.000秒/600フレーム)を12章で解決済みに更新。費用の状況証拠(残高・取引履歴)を12章に追記 |
 | 2026-09-11 | **色を確定**。コーデックスが9/9投稿から抽出した値(背景#F6F1E5・深緑#24473E・テラコッタ#E0785E)を9-0章に反映。9/8との照合は未実施と明記 |
 | 2026-09-11 | 0-6-1に既存2本のMP4 URLを追記(コーデックスからの依頼に対応) |
