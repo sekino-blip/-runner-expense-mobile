@@ -1089,6 +1089,131 @@ HARD CONSTRAINTS: same as #1(6章参照)。特に:
 
 ---
 
+### 9-5. #5 洗面所
+
+`【事実】` 2026-09-12、コーデックス経由でチャッピーから納品。企画書8-1章の事前チェック
+(「一番下が永久に使われない」を不採用)に加え、初回企画書が想定していた「振動で落ちやすい」
+という表現も**チャッピーが自主的に不採用と判断**(静止画から直接確認できる状態ではなく、
+形式B(自明な帰結)の基準を厳密に満たさないため)。一枚絵の要素配置はClaudeが確定(工程5)。
+
+| 項目 | 内容 |
+|---|---|
+| トピックバッジ | `洗面所` |
+| シリーズラベル | `暮らしの間違い探し / 05` |
+| 見出し | `ここ、` / `NGが3つあります`(固定・変更なし) |
+
+**一枚絵に描くもの**(洗面台と洗濯機を並べて正面から見た構図)
+
+| 要素 | 位置 | 種別 |
+|---|---|---|
+| 洗面台下段に、トレーやケースを介さず直接置かれたストック(詰め替えパック等) | **洗面台下段** | **NG①(易)** |
+| 洗濯機の天板に直接置かれた洗剤ボトル(独立した棚ではなく洗濯機本体の上と明示) | **洗濯機側・別区画** | **NG②(易)** |
+| タオルが何層にも積み重なり、層の境目が視認できる状態 | **洗面台上部の棚** | **NG③(難)** |
+| 洗面台本体・鏡 | 全体の骨格 | ダミー(正常・空間) |
+| 洗濯機本体 | 全体の骨格(NG②の背景) | ダミー(正常・空間) |
+| タオル掛けに掛かった使用中のタオル1〜2枚 | 洗面台脇 | ダミー(正常。NG③との対比) |
+| 石鹸・歯ブラシスタンド、洗面台上に整然と置かれている | 洗面台上 | ダミー(正常) |
+| 蓋付きゴミ箱 | 床・端 | ダミー(正常) |
+| 空の洗濯かご | 床・端 | ダミー(正常) |
+
+**チャッピーの3つの描画確認事項への対応**
+
+| # | 確認事項 | Claudeの対応 |
+|---|---|---|
+| 1 | 「直置き」はケース・トレーが無い状態と確認できること | NG①はストックと設置面の間に何も無い状態として描画。ケース越しの収納と誤認されないようにする |
+| 2 | NG②は洗濯機本体の上、独立棚と混同しない | 洗濯機の天板であることが明確に分かる構図とし、別の棚とは区別する |
+| 3 | NG③は探す時間からタオルの層が見える描画、使用頻度札は不要 | タオルの積み重なりは常に視認可能な状態で描画。ヒントとなる札は追加しない |
+
+**解答テロップ(C4)** ← **確定(チャッピー納品版。形式Aのみで構成、出典不要)**
+
+| # | 時間 | テロップ |
+|---|---|---|
+| ① | 10.00-11.33 | `洗面台の下に、` / `ストックを直置きしていませんか` |
+| ② | 11.33-12.67 | `洗濯機の上に、` / `洗剤を置いていませんか` |
+| ③ | 12.67-14.00 | `タオルが、` / `積み重なっていませんか` |
+
+**③が「難」である理由**: 設計上、洗面台上部の棚に配置するため。タオルの重なり自体へ注意を
+向ける必要がある点が難易度を上げる `【推測】`。実際の難易度(視聴者による検証)は未実施。
+下のタオルの使用実態には触れない。
+
+**CTA**: 動画内テロップは `いくつ分かった? コメントで`(半角スペースあり)。
+キャプション内は `いくつ分かった?コメントで`(スペースなし)。
+
+**キャプション(確定)**
+
+```
+ここ、NGが3つあります👀
+
+今回のテーマは「洗面所」。
+片付けの視点で探す、暮らしの間違い探しです。
+
+① 洗面台下に直置きされたストック
+② 洗濯機の上に置かれた洗剤
+③ 積み重なったタオル
+
+まずは洗面台の下のストックを、確認するところから。
+
+いくつ分かった?コメントで
+
+暮らしラク研究所｜@kurashi_rakulab
+毎日の「ちょっと面倒」を、少しラクに。
+
+※イラストは収納のイメージ図です。
+
+#間違い探し #収納アイデア #片付け #暮らしの工夫 #暮らしラク研究所
+```
+
+**事実主張**: 無(形式Aのみ。落下傾向・将来の使用・適正ストック数はすべて不採用として除外済み)
+
+### #5 洗面所 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Create a vertical 9:16 video, exactly 15.0 seconds, 1080x1920, 30fps.
+Follow the same visual style, safe areas, and timeline structure as
+#1 玄関(9-1章参照)exactly — only the scene illustration and captions differ.
+
+SCENE ILLUSTRATION (one single static drawing, used across the whole video):
+Setting: a bathroom sink/vanity area with a washing machine beside it,
+viewed from the front.
+- NG1 (easy): under the sink cabinet, lower section, stock items (refill
+  packs, spare bottles) placed DIRECTLY on the surface — no tray or case
+  between the items and the surface.
+- NG2 (easy): on top of the washing machine itself (not a separate shelf),
+  a detergent bottle placed directly on the machine's top panel. Must be
+  clearly on the washing machine, not on any nearby shelf.
+- NG3 (hard): on an upper shelf near the sink, towels stacked in multiple
+  visible layers — the layering must be visible throughout the search
+  phase (not just at the reveal).
+- Dummy items, all drawn in a NORMAL tidy state: the sink/vanity body and
+  mirror (structural), the washing machine body itself (structural,
+  background for NG2), 1-2 towels neatly hanging on a towel rack (contrast
+  to NG3), a soap/toothbrush stand neatly placed on the vanity, a lidded
+  trash bin, an empty laundry basket.
+Keep NG1/NG2/NG3 spaced apart from each other and from dummy items so their
+160px-diameter answer circles won't overlap anything else.
+
+TIMELINE: identical structure to #1(9-1章参照). Only these texts differ:
+[0.00-2.00] Series label "暮らしの間違い探し / 05". Terracotta badge
+  "洗面所". Headline "ここ、" / "NGが3つあります"(固定・変更なし).
+[10.00-11.33] circle on NG1 + caption: "洗面台の下に、" / "ストックを直置きしていませんか"
+[11.33-12.67] circle on NG2 + caption: "洗濯機の上に、" / "洗剤を置いていませんか"
+[12.67-14.00] circle on NG3 + caption: "タオルが、" / "積み重なっていませんか"
+[14.00-15.00] Caption: "いくつ分かった? コメントで"(半角スペースに注意). Loop per
+  #1's spec(cross-fade from 14.70 to 15.00, no closing end-card).
+
+HARD CONSTRAINTS: same as #1(6章参照)。特に:
+- Never mention bacteria, germs, hygiene, disinfection, or food safety.
+- Never assert future events (e.g., "this will fall due to vibration") or
+  usage patterns (e.g., "the bottom towel is never used") — use only the
+  exact caption text given above.
+- NG1's stock must be clearly directly on the surface, not inside a tray
+  or case.
+- NG2 must be clearly on the washing machine's top panel, not a shelf.
+- Never put the answer inside the question text.
+```
+
+---
+
 ## 10. HyperFrames 生成プロンプト雛形(参考・現在は未使用)
 
 `【事実】` 2026-09-11時点、コーデックスの実行環境ではHyperFramesが使えないため、
@@ -1221,3 +1346,4 @@ HARD CONSTRAINTS:
 | 2026-09-11 | 0章を全面改稿。チャッピー(ChatGPT)とコーデックス(Codex)を分離し、成果物別の担当表・各者の禁止事項・分担根拠・HANDOFFフォーマットを追加 |
 | 2026-09-12 | **#3冷蔵庫の中を納品**。設計書11章チェックリスト17項目合格。NG③(隠れた保存容器)の視認性を拡大比較画像で重点検証。エンコードは#2と同じ標準H.264 High/yuv420p、音声尺も映像と完全一致。費用の状況証拠をClaudeが4回目の独立確認(変化なし) |
 | 2026-09-12 | **#4クローゼットを納品**。設計書11章チェックリスト17項目合格。NG②の形状差描写、NG③の視認性(210フレーム同一ピクセル)を重点検証済み。エンコードは#2・#3と同じ標準H.264 High/yuv420p。費用の状況証拠をClaudeが5回目の独立確認(変化なし) |
+| 2026-09-12 | **#5洗面所を確定**。コーデックス経由でチャッピーから納品を受け、禁止事項チェック合格。当初想定していた「振動で落ちやすい」という表現もチャッピーが自主的に不採用と判断(形式Bの基準を厳密に満たさないため)。一枚絵の配置を9-5章に確定 |
