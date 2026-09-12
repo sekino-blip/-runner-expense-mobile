@@ -779,7 +779,135 @@ HARD CONSTRAINTS: same as #1(6章参照)。特に:
 
 ---
 
+### 9-3. #3 冷蔵庫の中
 
+`【事実】` 2026-09-12、コーデックス経由でチャッピーから納品。文言はチャッピーの裏取り済み
+(形式Aのみ、外部照合対象なし)。前回(#2)からの改善点: ①の「使用実態」への言及を排除、
+②の解答を問いかけ形に統一。一枚絵の要素配置はClaudeが確定(工程5)。
+
+| 項目 | 内容 |
+|---|---|
+| トピックバッジ | `冷蔵庫の中` |
+| シリーズラベル | `暮らしの間違い探し / 03` |
+| 見出し | `ここ、` / `NGが3つあります`(固定・変更なし) |
+
+**一枚絵に描くもの**(冷蔵庫内部を正面から見た構図。ドアポケットと本体棚を両方描く)
+
+| 要素 | 位置 | 種別 |
+|---|---|---|
+| ドアポケットに並んだ調味料瓶3本(同一形状) | **ドア下段** | **NG①(易)** |
+| 無地の不透明容器(正面に表示・ラベルが一切無いことが分かる描画) | **中段棚・中央** | **NG②(易)** |
+| 最上段棚奥、牛乳パック(手前)の陰から、別の保存容器の角が**一部だけ見える**(完全には隠れていない) | **最上段棚・奥・端寄り** | **NG③(難・前景と背景の組み合わせ)** |
+| 冷蔵庫内フレーム(棚板・仕切り) | 全体の骨格 | ダミー(正常・空間) |
+| 野菜室の引き出し、閉まっている | 下部 | ダミー(正常) |
+| 卵ケース、整然と収まっている | 中段棚・端 | ダミー(正常) |
+| ドアポケットの飲み物ボトル1本、まっすぐ立っている | ドア上段 | ダミー(正常) |
+| チーズなどの個包装、まとめてケースに収まっている | 中段棚・端 | ダミー(正常) |
+| 透明な保存容器、中身が見える状態(NG②の不透明容器との対比) | 中段棚・別位置 | ダミー(正常) |
+
+**チャッピーの6つの描画確認事項への対応**
+
+| # | 確認事項 | Claudeの対応 |
+|---|---|---|
+| 1 | ①②③を別対象として分ける | ドア(①)・棚中央(②)・棚最上段(③)と、領域そのものを分離 |
+| 2 | ②の容器を③の隠れた物と兼用しない | ②(中段・無地容器)と③の前景/背景(最上段・牛乳パック+保存容器)は別物として設計 |
+| 3 | ③は奥の物が一部見え、解答で初めて追加しない | 探す時間から**保存容器の角が常に一部見えている**状態で描画する。解答時に初出させない |
+| 4 | ②はラベルなしと分かる描画にする | 正面に表示物が一切無い無地容器として明示 |
+| 5 | ①にヒントとなる札等を追加しない | 調味料瓶3本のみ。使用頻度等を示す要素は追加しない |
+| 6 | NG3箇所を離し、易→易→難、③は上部/端 | 上表の配置で対応(ドア下段/棚中央/最上段奥端) |
+
+**解答テロップ(C4)** ← **確定(チャッピー納品版。形式Aのみで構成、出典不要)**
+
+| # | 時間 | テロップ |
+|---|---|---|
+| ① | 10.00-11.33 | `ドアポケットに、` / `調味料が並んでいませんか` |
+| ② | 11.33-12.67 | `この容器、` / `ラベルなしで置いていませんか` |
+| ③ | 12.67-14.00 | `手前の物で、` / `奥が隠れていませんか` |
+
+**③が「難」である理由**: 設計上、最上段棚の奥・端寄りに配置するため。加えて、手前の物だけでなく
+その後ろの見えにくい部分へ注意を向ける必要がある点が難易度を上げる `【推測】`(チャッピー提出の理由を
+Claudeが配置に反映)。実際の難易度(視聴者による検証)は未実施。
+
+**CTA**: 動画内テロップは `いくつ分かった? コメントで`(「?」の後に半角スペース、C5の指定どおり)。
+キャプション内は `いくつ分かった?コメントで`(スペースなし、#1・#2の確定キャプションと同一表記)。
+
+**キャプション(確定)**
+
+```
+ここ、NGが3つあります👀
+
+今回のテーマは「冷蔵庫の中」。
+片付けの視点で探す、暮らしの間違い探しです。
+
+① ドアポケットに並んだ調味料
+② ラベルのない不透明容器
+③ 手前の物に隠れた奥の物
+
+まずは調味料を、使う物かどうか確認するところから。
+
+いくつ分かった?コメントで
+
+暮らしラク研究所｜@kurashi_rakulab
+毎日の「ちょっと面倒」を、少しラクに。
+
+※イラストは収納のイメージ図です。
+
+#間違い探し #収納アイデア #片付け #暮らしの工夫 #暮らしラク研究所
+```
+
+**事実主張**: 無(形式Aのみ。使用実態・購入履歴・効果・本数基準はすべて不採用として除外済み)
+
+### #3 冷蔵庫の中 確定版プロンプト(コーデックスにそのまま渡す)
+
+```
+Create a vertical 9:16 video, exactly 15.0 seconds, 1080x1920, 30fps.
+Follow the same visual style, safe areas, and timeline structure as
+#1 玄関(9-1章参照)exactly — only the scene illustration and captions differ.
+
+SCENE ILLUSTRATION (one single static drawing, used across the whole video):
+Setting: the interior of a refrigerator, viewed from the front with the door
+open, showing both the door pocket shelves and the main body shelves.
+- NG1 (easy): 3 identical-shaped condiment bottles lined up on the door
+  pocket, positioned lower door area.
+- NG2 (easy): a plain opaque container with NO visible label or markings on
+  its front face, positioned on the middle shelf, center. Must be clearly
+  distinct in location from NG1 (door vs. shelf).
+- NG3 (hard): on the top shelf, toward the back and one edge, a milk carton
+  sits in front of another storage container — the container behind must be
+  PARTIALLY VISIBLE (a corner or edge peeking out) throughout the search
+  phase. Do NOT introduce this hidden object only at the answer reveal.
+- Dummy items, all drawn in a NORMAL tidy state: the fridge's internal frame/
+  shelving (structural), a closed vegetable drawer (bottom), a neatly filled
+  egg case (middle shelf edge), one beverage bottle standing upright in the
+  door's upper pocket, individually wrapped cheese slices grouped in a case
+  (middle shelf edge), and one transparent storage container with visible
+  contents (middle shelf, elsewhere) as a contrast to NG2's opaque one.
+Keep NG1/NG2/NG3 spaced apart from each other and from dummy items so their
+160px-diameter answer circles won't overlap anything else.
+
+TIMELINE: identical structure to #1(9-1章参照). Only these texts differ:
+[0.00-2.00] Series label "暮らしの間違い探し / 03". Terracotta badge
+  "冷蔵庫の中". Headline "ここ、" / "NGが3つあります"(固定・変更なし).
+[10.00-11.33] circle on NG1 + caption: "ドアポケットに、" / "調味料が並んでいませんか"
+[11.33-12.67] circle on NG2 + caption: "この容器、" / "ラベルなしで置いていませんか"
+[12.67-14.00] circle on NG3(背景の保存容器側) + caption: "手前の物で、" / "奥が隠れていませんか"
+[14.00-15.00] Caption: "いくつ分かった? コメントで"(半角スペースに注意). Loop per
+  #1's spec(cross-fade from 14.70 to 15.00, no closing end-card).
+
+HARD CONSTRAINTS: same as #1(6章参照)。特に:
+- Never mention bacteria, germs, hygiene, disinfection, or food safety
+  (even though this scene is a refrigerator — no expiration/spoilage/
+  freshness claims of any kind).
+- Never assert usage patterns (e.g., "these condiments are never used") or
+  purchase history (e.g., "duplicate items were bought").
+- Never introduce NG3's hidden container only at the reveal — it must be
+  partially visible from 2.00s onward.
+- Never put the answer inside the question text.
+```
+
+---
+
+## 10. HyperFrames 生成プロンプト雛形(参考・現在は未使用)
 
 `【事実】` 2026-09-11時点、コーデックスの実行環境ではHyperFramesが使えないため、
 **本章は使用しない。** Higgsedit/FFmpegでの制作は9-0章のパラメータと、9章末尾の
@@ -898,6 +1026,7 @@ HARD CONSTRAINTS:
 | 2026-09-11 | **A-2/A-3承認、A-8方針確定**。BGMなしで確定。毎日投稿(週7本、間違い探し6本+クイズ1本)。企画書8-2章に「クイズ枠」の新ルールを新設(旧「暮らしの豆知識帳/01」は不採用のまま) |
 | 2026-09-11 | **連携フローを変更**。コーデックスがチャッピーとの窓口を担当することに変更(0-2-1新設)。0-1/0-2/0-3を更新し、コーデックスの新たな禁止事項(ルールの省略・改変禁止)を追加。Claudeの最終レビュー工程は不変 |
 | 2026-09-12 | **#2シンク下を確定**。コーデックス経由でチャッピーから納品を受け、禁止事項チェック合格。一枚絵の要素配置をClaudeが確定(9-2章)。チャッピーの3つの確認事項に回答し、「NGと見直す箇所」の標準解釈を明文化(以降の全シーン共通ルール) |
+| 2026-09-12 | **#3冷蔵庫の中を確定**。コーデックス経由でチャッピーから納品を受け、禁止事項チェック合格(前回からの改善: ①の使用実態への言及を排除、②の解答を問いかけ形に統一)。チャッピーの6つの描画確認事項に対応し、9-3章に一枚絵の配置を確定。NG③(奥の物)は探す時間から一部視認できる設計とし、解答で初出させない原則を明記 |
 | 2026-09-11 | 9/8との色照合結果(RGB差3以内)を反映。テラコッタが文字採取値である留保を追記し、11章チェックリストにバッジ目視確認を追加。既存動画の尺(20.000秒/600フレーム)を12章で解決済みに更新。費用の状況証拠(残高・取引履歴)を12章に追記 |
 | 2026-09-11 | **色を確定**。コーデックスが9/9投稿から抽出した値(背景#F6F1E5・深緑#24473E・テラコッタ#E0785E)を9-0章に反映。9/8との照合は未実施と明記 |
 | 2026-09-11 | 0-6-1に既存2本のMP4 URLを追記(コーデックスからの依頼に対応) |
